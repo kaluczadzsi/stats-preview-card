@@ -2,13 +2,20 @@
 @import 'reset';
 
 body {
-  background-color: $clr-primary-700;
-  height: 100vh;
+  background-color: $clr-primary-900;
+  height: 100%;
+  display: grid;
+  place-content: center;
 }
 
 .container {
   height: 100%;
-  border: 1px solid pink;
+  padding: 1.5rem;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card-img {
@@ -25,4 +32,56 @@ body {
   background-color: $clr-primary-200;
   opacity: 0.5;
   filter: contrast(130%);
+}
+
+.card-content {
+  font-family: $ff-inter;
+  text-align: center;
+  color: $clr-neutral-100;
+  padding: 2rem;
+  background-color: $clr-primary-700;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+
+    span {
+      color: $clr-primary-200;
+    }
+  }
+
+  p {
+    color: $clr-neutral-200;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.3rem;
+
+    li {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      color: $clr-neutral-300;
+      font-family: $ff-lexend;
+
+      span {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $clr-neutral-100;
+
+        // color: red;
+      }
+    }
+  }
 }
